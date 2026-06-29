@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Support Triager - Pitch Deck</title>
+    <style>
+        body, html { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; height: 100%; background: #0f172a; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        .slide { height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; scroll-snap-align: start; padding: 2rem; box-sizing: border-box; position: relative; }
+        .container { scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh; width: 100vw; }
+        h1 { font-size: 3.5rem; margin-bottom: 1rem; background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 2rem; margin-bottom: 2rem; color: #94a3b8; }
+        p { font-size: 1.5rem; max-width: 800px; line-height: 1.6; color: #cbd5e1; margin: 0 auto 1.5rem auto; }
+        ul { text-align: left; font-size: 1.3rem; color: #cbd5e1; max-width: 700px; line-height: 1.8; margin: 0 auto; }
+        .footer { position: absolute; bottom: 20px; font-size: 1rem; color: #475569; }
+        .next-btn { margin-top: 2.5rem; padding: 1rem 2rem; font-size: 1.2rem; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: bold; transition: all 0.2s; }
+        .next-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+        
+        /* Glassmorphism boxes for content */
+        .glass-box { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 4rem 3rem; max-width: 900px; width: 100%; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1 -->
+        <div class="slide" id="slide1">
+            <div class="glass-box">
+                <h1>🤖 Smart Support Triager</h1>
+                <h2>UiPath AgentHack</h2>
+                <p>An intelligent agentic workflow using AI and UiPath Maestro to triage customer support emails automatically.</p>
+                <a href="#slide2" class="next-btn">Start Presentation ↓</a>
+            </div>
+            <div class="footer">Slide 1 / 5</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide" id="slide2">
+            <div class="glass-box">
+                <h1>The Problem</h1>
+                <p>Customer support teams spend countless hours manually reading and triaging emails.</p>
+                <ul>
+                    <li>⏳ Simple requests take time away from complex issues.</li>
+                    <li>😠 Angry customers wait in the same queue as routine inquiries.</li>
+                    <li>💸 High operational costs and slow resolution times.</li>
+                </ul>
+                <a href="#slide3" class="next-btn">Next ↓</a>
+            </div>
+            <div class="footer">Slide 2 / 5</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide" id="slide3">
+            <div class="glass-box">
+                <h1>Our Solution</h1>
+                <p>A highly intelligent "first line of defense" combining AI reasoning with UiPath Maestro's enterprise governance.</p>
+                <ul>
+                    <li>🧠 <strong>AI Agent:</strong> Reads incoming emails to extract structured JSON (intent, sentiment).</li>
+                    <li>🛤️ <strong>Maestro BPMN:</strong> Routes the ticket based on the AI's classification.</li>
+                    <li>🤖 <strong>RPA Automation:</strong> Instantly resolves simple queries (Happy Path).</li>
+                    <li>👨‍💻 <strong>Action Center:</strong> Escalates high-risk cases to human agents (Exception Path).</li>
+                </ul>
+                <a href="#slide4" class="next-btn">Next ↓</a>
+            </div>
+            <div class="footer">Slide 3 / 5</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide" id="slide4">
+            <div class="glass-box">
+                <h1>Technical Architecture</h1>
+                <p>Built rapidly using Python and UiPath integrations.</p>
+                <ul>
+                    <li><strong>LLM Engine:</strong> Prompt-engineered to output strict, deterministic JSON for system integration.</li>
+                    <li><strong>Routing Engine:</strong> BPMN Exclusive Gateways dynamically evaluate sentiment and intent variables.</li>
+                    <li><strong>Frontend UI:</strong> Custom glassmorphism web app to visualize the backend agentic routing in real-time.</li>
+                </ul>
+                <a href="#slide5" class="next-btn">Next ↓</a>
+            </div>
+            <div class="footer">Slide 4 / 5</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide" id="slide5">
+            <div class="glass-box">
+                <h1>Future Roadmap</h1>
+                <p>What's next for the Smart Support Triager?</p>
+                <ul>
+                    <li>📧 Direct integration with live email via UiPath Integration Service.</li>
+                    <li>📊 Connections to real CRMs (Salesforce, Zendesk).</li>
+                    <li>🚀 Expanding the AI Agent to handle dozens of specific intents and multilingual support.</li>
+                </ul>
+                <a href="#slide1" class="next-btn" style="background: #10b981;">Back to Start ↑</a>
+            </div>
+            <div class="footer">Slide 5 / 5</div>
+        </div>
+    </div>
+</body>
+</html>
