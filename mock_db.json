@@ -1,0 +1,23 @@
+[
+  {
+    "order_id": "ORD-1234",
+    "customer_email": "john.doe@example.com",
+    "status": "Shipped",
+    "tracking_number": "TRK987654321",
+    "expected_delivery": "2026-07-02"
+  },
+  {
+    "order_id": "ORD-5678",
+    "customer_email": "jane.smith@example.com",
+    "status": "Processing",
+    "tracking_number": null,
+    "expected_delivery": "2026-07-05"
+  },
+  {
+    "order_id": "ORD-9999",
+    "customer_email": "angry.customer@example.com",
+    "status": "Delayed",
+    "tracking_number": "TRK111111111",
+    "expected_delivery": "Unknown"
+  }
+]

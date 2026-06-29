@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UiPath AgentHack: Smart Support Triager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="glass-header">
+        <div class="logo-area">
+            <i class="fa-solid fa-robot brand-icon"></i>
+            <h1>Smart Support <span>Triager</span></h1>
+        </div>
+        <div class="badge">UiPath Maestro BPMN</div>
+    </header>
+
+    <main class="container">
+        <!-- Left Panel: Input Simulation -->
+        <section class="panel glass-panel input-panel">
+            <h2><i class="fa-solid fa-envelope-open-text"></i> Incoming Email</h2>
+            <p class="subtitle">Simulate a customer support ticket</p>
+            
+            <div class="form-group">
+                <label>Customer Email</label>
+                <input type="text" id="email-address" value="customer@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label>Email Content</label>
+                <textarea id="email-content" rows="4">Hi, can you tell me the status of ORD-1234? Thanks!</textarea>
+            </div>
+
+            <div class="quick-fills">
+                <button class="pill-btn" onclick="fillHappyPath()">Happy Path (Status)</button>
+                <button class="pill-btn angry-btn" onclick="fillExceptionPath()">Exception Path (Angry)</button>
+            </div>
+
+            <button id="run-btn" class="primary-btn">
+                <span>Run Agentic Workflow</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </section>
+
+        <!-- Right Panel: Visualizer -->
+        <section class="panel glass-panel visualizer-panel">
+            <h2><i class="fa-solid fa-network-wired"></i> Maestro Orchestration</h2>
+            
+            <div class="workflow-steps">
+                
+                <!-- Step 1: AI Agent -->
+                <div class="step" id="step-ai">
+                    <div class="step-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="step-content">
+                        <h3>1. AI Agent Classification</h3>
+                        <p class="status-text waiting">Waiting for input...</p>
+                        <div class="json-output hidden" id="ai-json">
+                            <!-- JSON will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="connector" id="conn-1"></div>
+
+                <!-- Step 2: BPMN Gateway -->
+                <div class="step" id="step-gateway">
+                    <div class="step-icon gateway-icon"><i class="fa-solid fa-code-branch"></i></div>
+                    <div class="step-content">
+                        <h3>2. BPMN Logic Gateway</h3>
+                        <p class="status-text waiting">Waiting for classification...</p>
+                    </div>
+                </div>
+
+                <div class="connector" id="conn-2"></div>
+
+                <!-- Step 3: Action -->
+                <div class="step action-step" id="step-action">
+                    <div class="step-icon" id="action-icon"><i class="fa-solid fa-gears"></i></div>
+                    <div class="step-content">
+                        <h3 id="action-title">3. Final Action</h3>
+                        <p class="status-text waiting" id="action-text">Waiting for routing...</p>
+                        <div class="action-card hidden" id="action-card">
+                            <!-- Action details injected here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
