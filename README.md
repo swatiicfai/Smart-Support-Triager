@@ -3,6 +3,10 @@
   <h1>🤖 Smart Support Triager</h1>
   <p><strong>Track 2: UiPath Maestro BPMN</strong></p>
   <p>An intelligent agentic workflow that uses AI to classify customer support emails and UiPath Maestro BPMN to automatically resolve simple requests or route complex exceptions to human agents.</p>
+  <br/>
+  
+  [![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge)](https://swatiicfai.github.io/Smart-Support-Triager/)
+  [![Demo Video](https://img.shields.io/badge/Demo-Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=WiQBYqf0Wh8)
 </div>
 
 ---
